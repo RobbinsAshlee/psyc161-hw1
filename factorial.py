@@ -7,12 +7,18 @@ Note:  this is just a skeleton for you to work with.  But it already
 from nose.tools import assert_equal
 
 def factorial_recursive(n):
-    # TODO Define your logic for factorial here
-    pass # does nothing
+    factorial = 1
+    for i in range(n):
+        factorial = factorial * (i+1)
+    pass
+
 
 def test_factorial():
     assert_equal(factorial_recursive(1), 1)
-    # TODO: add more
+    assert_equal(factorial_recursive(2), 2)
+    assert_equal(factorial_recursive(3), 6)
+test_factorial()
+
 
 if __name__ == '__main__':
     # This is a way to determine either file was "executed", so if it was
@@ -21,4 +27,4 @@ if __name__ == '__main__':
 
     nconditions = raw_input("Please enter number of conditions: ")
     norders = factorial_recursive(nconditions)
-    print("Number of possible trial orders: " + str(norders)
+    print("Number of possible trial orders: " + str(norders))
