@@ -6,11 +6,12 @@ Note:  this is just a skeleton for you to work with.  But it already
 
 from nose.tools import assert_equal
 
+
 def factorial_recursive(n):
     if (n <= 1):
         return 1
     else:
-        return n * factorial_recursive(n-1)
+        return (n * factorial_recursive(n-1))
     pass
 
 
